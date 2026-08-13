@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "owasp-skills",
+  "owner": {
+    "name": "glauberportella",
+    "url": "https://github.com/glauberportella/owasp-skills"
+  },
+  "description": "OWASP-based security Agent Skills for AI coding assistants (Claude Code, OpenCode, and other SKILL.md-compatible tools).",
+  "plugins": [
+    {
+      "name": "owasp-top10-web",
+      "source": "./",
+      "skills": ["./skills/owasp-top10-web"],
+      "strict": false,
+      "description": "OWASP Top 10 Web Application Security Risks (2021): access control, injection, crypto, SSRF, and more.",
+      "license": "MIT",
+      "category": "security"
+    },
+    {
+      "name": "owasp-api-security",
+      "source": "./",
+      "skills": ["./skills/owasp-api-security"],
+      "strict": false,
+      "description": "OWASP API Security Top 10 (2023): BOLA, broken auth, rate limiting, and other API-specific risks.",
+      "license": "MIT",
+      "category": "security"
+    },
+    {
+      "name": "owasp-llm-security",
+      "source": "./",
+      "skills": ["./skills/owasp-llm-security"],
+      "strict": false,
+      "description": "OWASP Top 10 for LLM Applications (2025): prompt injection, excessive agency, insecure output handling, and MCP tool-server security.",
+      "license": "MIT",
+      "category": "security"
+    },
+    {
+      "name": "owasp-asvs-secure-coding",
+      "source": "./",
+      "skills": ["./skills/owasp-asvs-secure-coding"],
+      "strict": false,
+      "description": "OWASP ASVS turned into a prescriptive secure-coding checklist for auth, sessions, crypto, validation, and more.",
+      "license": "MIT",
+      "category": "security"
+    },
+    {
+      "name": "owasp-dependency-secrets",
+      "source": "./",
+      "skills": ["./skills/owasp-dependency-secrets"],
+      "strict": false,
+      "description": "Dependency (SCA) vulnerability management and secrets scanning/hygiene.",
+      "license": "MIT",
+      "category": "security"
+    },
+    {
+      "name": "owasp-skills-all",
+      "source": "./",
+      "skills": [
+        "./skills/owasp-top10-web",
+        "./skills/owasp-api-security",
+        "./skills/owasp-llm-security",
+        "./skills/owasp-asvs-secure-coding",
+        "./skills/owasp-dependency-secrets"
+      ],
+      "strict": false,
+      "description": "All 5 owasp-skills bundled into a single plugin install.",
+      "license": "MIT",
+      "category": "security"
+    }
+  ]
+}
